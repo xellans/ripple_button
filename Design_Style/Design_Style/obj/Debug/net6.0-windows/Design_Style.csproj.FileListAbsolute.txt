@@ -1,0 +1,17 @@
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Debug\net6.0-windows\Design_Style.deps.json
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Debug\net6.0-windows\Design_Style.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Debug\net6.0-windows\Design_Style.pdb
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\ButtonRipple.baml
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style_MarkupCompile.cache
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.g.resources
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.AssemblyInfoInputs.cache
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.AssemblyInfo.cs
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.csproj.CoreCompileInputs.cache
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\refint\Design_Style.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.pdb
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\ref\Design_Style.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style_MarkupCompile.lref
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\obj\Debug\net6.0-windows\Design_Style.csproj.AssemblyReference.cache

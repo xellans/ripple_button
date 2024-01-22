@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SSzmlL0tF9VAkCyDCFUwWBVGWI7VesU9oE/7FrxJuSu2pDWq9hCkKMePZ+nli7FtFozyUkOV31rbGmZnRdofHQ==",
+  "success": true,
+  "projectFilePath": "D:\\Project\\Visul studio\\.Design\\Design_Style\\Design_Style-Exemple\\Design_Style-Exemple.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Race\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\Race\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\Race\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

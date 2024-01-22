@@ -1,0 +1,6 @@
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\Design_Style.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\Design_Style.deps.json
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\Design_Style.pdb
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\MaterialDesignColors.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\MaterialDesignThemes.Wpf.dll
+D:\Project\Visul studio\.Design\Design_Style\Design_Style\bin\Release\net6.0-windows\publish\Microsoft.Xaml.Behaviors.dll

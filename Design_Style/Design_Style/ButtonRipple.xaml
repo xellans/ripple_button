@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:helper="clr-namespace:Design_Style.Hellper"
+                    xmlns:ConverterHellper="clr-namespace:Design_Style.Converter"
+                    xmlns:local="clr-namespace:Design_Style">
+    <ConverterHellper:RectConverter x:Key="RectConverter"></ConverterHellper:RectConverter>
+    <ConverterHellper:DoubleToCornerRadius x:Key="DoubleToCornerRadius"></ConverterHellper:DoubleToCornerRadius>
+    <Style x:Key="Style_ButtonRipple" TargetType="{x:Type Button}">
+        <Setter Property="local:ButtonRipple.CornerRadiusButton" Value="6"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
+        <Setter Property="Background" Value="#46BCFF"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Point x:Key="zero">0 0</Point>
+                    </ControlTemplate.Resources>
+                    <Border x:Name="templateRoot" ClipToBounds="True" 
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding  local:ButtonRipple.CornerRadiusButton, Converter={StaticResource DoubleToCornerRadius}}"
+                            helper:MouseHelper.IsDownPosition="True">
+                        <Grid ClipToBounds="True" >
+                            <!--Ripple Effect Body-->
+                            <Path x:Name="ripplePath"
+                               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(local:ButtonRipple.RippleColor)}">
+                                <Path.Data>
+                                    <EllipseGeometry x:Name="rippleEllipse"
+                                      Center="{Binding Path=(helper:MouseHelper.LastDownPosition), ElementName=templateRoot, TargetNullValue={StaticResource zero}}"
+                                      RadiusY="{Binding RadiusX, RelativeSource={RelativeSource Self}}"/>
+                                </Path.Data>
+                            </Path>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Grid>
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="helper:MouseHelper.LastMouseDown">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="rippleEllipse"
+                                                         Storyboard.TargetProperty="RadiusX" BeginTime="0:0:0" Duration="0:0:0.5" From="0" 
+                                                         To="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        
+                                        <DoubleAnimation Storyboard.TargetName="ripplePath" 
+                                                         Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.0" Duration="0:0:0.6" From=".5" To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Border.Triggers>
+                        <Border.Clip>
+                            <RectangleGeometry 
+                              RadiusX="{TemplateBinding local:ButtonRipple.CornerRadiusButton}" 
+                              RadiusY="{Binding RadiusX, RelativeSource={RelativeSource Mode=Self}}">
+                                <RectangleGeometry.Rect>
+                                    <MultiBinding Converter="{StaticResource RectConverter}">
+                                        <Binding ElementName="templateRoot" Path="ActualWidth"/>
+                                        <Binding ElementName="templateRoot" Path="ActualHeight"/>
+                                    </MultiBinding>
+                                </RectangleGeometry.Rect>
+                            </RectangleGeometry>
+                        </Border.Clip>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(local:ButtonRipple.BackgroundMouseOver)}" TargetName="templateRoot"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
